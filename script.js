@@ -1,5 +1,6 @@
 const myurl = 'https://api.openweathermap.org/data/2.5';
 const cikti = document.getElementById('output').innerHTML;
+document.getElementById('query').setAttribute("autocomplete","off");
 
 function searchCity(event) {
     event.preventDefault(); // Formun varsayılan davranışını engeller (sayfayı yenilemeyi önler)
