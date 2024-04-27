@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(photos/bckgrnd2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.searchContainer {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+    max-width: 100%; /* Maksimum genişlik */
+    margin: 0 auto; /* Merkezlemek için */
+}
+
+.searchBar {
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 20px;
+    width: 800px;
+    max-width: 300px;
+}
+
+#searchButton{
+    color: red;
+}
+
+form {
+    margin-top: 10px;
+    width: 300px;
+    height: 44px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 15px;
+  }
+
+  input {
+    all: unset;
+    font: 16px system-ui;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    padding: 6px 10px;
+  }
+
+  ::placeholder {
+    color: #fff;
+    opacity: 0.7; 
+  }
+
+  button {
+    all: unset;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    outline: none;
+  }
+  
+  svg {
+    color: #fff;
+    fill: currentColor;
+    width: 54px;
+    height: 34px;
+    padding: 10px;
+  }
+button:focus {
+    outline: none;
+}
+.humidity {
+    display: inline-block; /* inline */
+    width: 24px;
+    height: 24px;
+    background-image: url(photos/humidity.png);
+    background-size: cover;
+    vertical-align: middle; /* Diğer içerikle dikey hizalamayı sağlar */
+}
+.wind{
+    display: inline-block; /* inline */
+    width: 24px;
+    height: 24px;
+    background-image: url(photos/wind.png);
+    background-size: cover;
+    vertical-align: middle; /* Diğer içerikle dikey hizalamayı sağlar */
+}

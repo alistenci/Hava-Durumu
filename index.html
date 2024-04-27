@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hava Durumu</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="row d-flex justify-content-center" style="color: white;">
+        <h1 style="color: wheat;">Hava Durumu</h1>
+    </div>
+    <header class="baslik">
+        <div class="searchContainer">
+             <form role="search" id="form" onsubmit="searchCity(event)">
+            <input type="search" id="query" name="q"
+             placeholder="Şehir..."
+             aria-label="Search through site content">
+            <button>
+              <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+            </button>
+          </form>
+          </div>
+          
+
+    </header>
+    <div class="row d-flex justify-content-center py-5">
+        <div class="col-md-8 col-lg-6 col-xl-5">
+      
+          <div class="card text-body" style=" border-radius: 35px; opacity: 0.9;">
+            <div class="card-body p-4">
+      
+              <div class="d-flex">
+                <h6 id="sehir" class="flex-grow-1"></h6>
+                <h6 id="datetime">15:07</h6>
+              </div>
+              
+      
+              <div class="d-flex flex-column text-center mt-5 mb-4">
+                <h6 class="display-4 mb-0 font-weight-bold" id="sicaklik"></h6>
+                <span class="small" style="color: #868B94" id="havadurumu"></span>
+              </div>
+      
+              <div class="d-flex align-items-center">
+                <div class="flex-grow-1" style="font-size: 1rem;">
+                  <div><i class="wind" style="color: #868B94;"></i> <span id="ruzgar" class="ms-1"></span>
+                  </div>
+                  <div><i class="humidity" style="color: #868B94;"></i> <span class="ms-1" id="nem"></span></div>
+                </div>
+                <div>
+                  <img id="icon"
+                    width="100px">
+                </div>
+              </div>
+      
+            </div>
+          </div>
+      
+        </div>
+      </div>
+
+      <div id="output">
+
+      </div>
+    <script src="script.js"></script>
+    <script>
+        // Sat ve dakikayı al
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+    
+        hours = hours < 10 ? '0' + hours : hours;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+    
+        var time = hours + ':' + minutes;
+    
+        document.getElementById("datetime").innerHTML = time;
+    </script>
+</body>
+</html>
